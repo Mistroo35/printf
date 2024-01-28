@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-  unsigned int i;
+unsigned int i;
     int counter = 0;
     va_list ptrArgList;
 
