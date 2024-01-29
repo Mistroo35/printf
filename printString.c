@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * printString - print a string.
- * @String: string to print.
- * Return: the length of the String.
- */
+* printString - print a string.
+* @String: string to print.
+* Return: the length of the String.
+*/
 
 int printString(const char *String)
 {
