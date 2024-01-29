@@ -20,6 +20,7 @@ int printString(const char *String)
 	else
 	{
 		const char *nill = "nill";
+
 		len = strlen(nill);
 		for (i = 0; i < len; i++)
 		{

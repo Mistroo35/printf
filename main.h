@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <stdio.h>
 /*prototypes*/
 int printChar(int ch);
 int printString(const char *string);
