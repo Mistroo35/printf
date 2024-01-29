@@ -11,6 +11,7 @@
 int printChar(int ch);
 int printString(const char *string);
 int _putchar(char c);
+int printInt(int number);
 int _printf(const char *format, ...);
 
 #endif

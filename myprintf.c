@@ -35,10 +35,8 @@ int _printf(const char *format, ...)
 					counter += printString(va_arg(ptrArgList, const char *));
 					break;
 				case 'd':
-					counter += print_number_putchar(va_arg(ptrArgList, int));
-					break;
 				case 'i':
-					counter += print_number_putchar(va_arg(ptrArgList, int));
+					counter += printInt(va_arg(ptrArgList, int));
 					break;
 				default:
 					putchar('%');
