@@ -10,6 +10,9 @@
 #include <stdio.h>
 /*prototypes*/
 int printChar(int Ch);
+int _putchar(char c);
+int printInt(int Int);
+int printDec(int Dec);
 int handleFormat(char Specifier, va_list PtrArg);
 int printDigit(long Number, int Base);
 int printHexa(long Number, int Base);
