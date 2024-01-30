@@ -34,10 +34,12 @@ int _printf(const char *format, ...)
 				case 's':
 					counter += printString(va_arg(ptrArgList, const char *));
 					break;
-				// case 'd':
-				// case 'i':
-				//	counter += printInt(va_arg(ptrArgList, int));
-				//	break;
+				/*
+				*case 'd':
+				*case 'i':
+					counter += printInt(va_arg(ptrArgList, int));
+					break;
+				*/
 				case '%':
 					putchar('%');
 					counter += 2;
