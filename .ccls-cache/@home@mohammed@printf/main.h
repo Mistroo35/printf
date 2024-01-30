@@ -3,6 +3,7 @@
 
 /*Add libraries*/
 #include <stdarg.h>
+#include <limits.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
@@ -11,7 +12,8 @@
 int printChar(int ch);
 int printString(const char *string);
 int _putchar(char c);
-int printInt(int number);
+int printInt(va_list args);
+int printDec(va_list args);
 int _printf(const char *format, ...);
 
 #endif

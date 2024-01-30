@@ -1,24 +1,25 @@
 #include "main.h"
 /**
  * printInt - prints integer
- * @Int: integer to print
+ * @args: argument to print
  * Return: number of characters printed
  */
-int printInt(int Int)
+int printInt(va_list args)
 {
+	int Int = va_arg(args, int);
 	int num, last = Int % 10, digit, exp = 1;
-	int  Counter = 1;
+	int  i = 1;
 
 	Int = Int / 10;
 	num = Int;
 
 	if (last < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		num = -num;
 		Int = -Int;
 		last = -last;
-		Counter++;
+		i++;
 	}
 	if (num > 0)
 	{
@@ -31,27 +32,28 @@ int printInt(int Int)
 		while (exp > 0)
 		{
 			digit = num / exp;
-			putchar(digit + '0');
+			_putchar(digit + '0');
 			num = num - (digit * exp);
 			exp = exp / 10;
-			Counter++;
+			i++;
 		}
 	}
-	putchar(last + '0');
+	_putchar(last + '0');
 
-	return (Counter);
+	return (i);
 }
 
 /**
  * printDec - prints decimal
- * @Dec: Decimal to print
+ * @args: argument to print
  * Return: number of characters printed
  */
 
-int printDec(int Dec)
+int printf_dec(va_list args)
 {
+	int Dec = va_arg(args, int);
 	int num, last = Dec % 10, digit;
-	int  Counter = 1;
+	int  i = 1;
 	int exp = 1;
 
 	Dec = Dec / 10;
@@ -59,11 +61,11 @@ int printDec(int Dec)
 
 	if (last < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		num = -num;
 		Dec = -Dec;
 		last = -last;
-		Counter++;
+		i++;
 	}
 	if (num > 0)
 	{
@@ -76,13 +78,13 @@ int printDec(int Dec)
 		while (exp > 0)
 		{
 			digit = num / exp;
-			putchar(digit + '0');
+			_putchar(digit + '0');
 			num = num - (digit * exp);
 			exp = exp / 10;
-			Counter++;
+			i++;
 		}
 	}
-	putchar(last + '0');
+	_putchar(last + '0');
 
-	return (Counter);
+	return (i);
 }
