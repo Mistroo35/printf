@@ -42,7 +42,7 @@ int handleFormat(char Specifier, va_list PtrArg)
 	}
 	else
 	{
-		Counter += write(1, &Specifier, 1);
+		return (-1);
 	}
 
 	return (Counter);

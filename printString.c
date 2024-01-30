@@ -17,6 +17,8 @@ int printString(char *String)
 		while (*String)
 		{
 			printChar((int)*String);
+			++Counter;
+			++String;
 		}
 		return (Counter);
 	}
