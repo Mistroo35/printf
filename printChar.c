@@ -8,10 +8,10 @@
 */
 
 int printChar(int ch)
-		{
-		char charecter;
+{
+	char charecter;
 
-		charecter = ch;
-		_putchar(charecter);
-		return (1);
-		}
+	charecter = ch;
+	putchar(charecter);
+	return (1);
+}
