@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  *_printf - A custom printf function
@@ -42,12 +43,12 @@ int _printf(const char *format, ...)
 				*/
 				case '%':
 					putchar('%');
-					counter += 2;
+					counter += 1;
 					break;
 				default:
 					putchar('%');
-
-					counter += 1;
+					putchar(format[i]);
+					counter += 2;
 					break;
 			}
 		}

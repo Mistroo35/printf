@@ -19,7 +19,7 @@ int printString(const char *String)
 	}
 	else
 	{
-		const char *nill = "nill";
+		const char *nill = "(null)";
 
 		len = strlen(nill);
 		for (i = 0; i < len; i++)
