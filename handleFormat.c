@@ -20,13 +20,21 @@ int handleFormat(char Specifier, va_list PtrArg)
 	{
 		Counter += printString(va_arg(PtrArg, char *));
 	}
-	else if (Specifier == 'd')
+	else if (Specifier == 'd' || Specifier == 'i')
 	{
 		Counter += printDigit((long)(va_arg(PtrArg, int)), 10);
 	}
 	else if (Specifier == 'x')
 	{
 		Counter += printDigit(va_arg(PtrArg, unsigned int), 16);
+	}
+	else if (Specifier == 'o')
+	{
+		Counter += printDigit(va_arg(PtrArg, unsigned int), 8);
+	}
+	else if (Specifier == 'u')
+	{
+		Counter += printDigit(va_arg(PtrArg, unsigned int), 10);
 	}
 	else if (Specifier == 'X')
 	{
