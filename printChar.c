@@ -1,17 +1,12 @@
 #include "main.h"
 
 /**
-*printChar - This function print char with specifir 'c'
-*@ch: char to print
-*
-*Return: 1
+* printChar - print chat to stout
+* @Char: Char to print
+* Return: 1
 */
 
-int printChar(int ch)
+int printChar(int Char)
 {
-	char charecter;
-
-	charecter = ch;
-	putchar(charecter);
-	return (1);
+	return (write(1, &Char, 1));
 }

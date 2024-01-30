@@ -1,31 +1,33 @@
 #include "main.h"
+
 /**
-* printString - print a string.
-* @String: string to print.
-* Return: the length of the String.
+* printString - Function to print print string
+* @String: String to print
+* Return: Length of string
 */
 
-int printString(const char *String)
+int printString(char *String)
 {
-	int i, len;
+	int Counter;
 
+	Counter = 0;
 	if (String == NULL)
 	{
 		String = "(null)";
-		len = strlen(String);
-		for (i = 0; i < len; i++)
+		while (*String)
 		{
-			putchar(String[i]);
+			printChar((int)*String);
 		}
-		return (len);
+		return (Counter);
 	}
 	else
 	{
-		len = strlen(String);
-		for (i = 0; i < len; i++)
+		while (*String)
 		{
-			putchar(String[i]);
+			printChar((int)*String);
+			++Counter;
+			++String;
 		}
-		return (len);
 	}
+	return (Counter);
 }
