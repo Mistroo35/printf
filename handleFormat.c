@@ -37,5 +37,5 @@ int handleFormat(char Specifier, va_list PtrArg)
 		Counter += write(1, &Specifier, 1);
 	}
 
-	return (Counter - 1);
+	return (Counter);
 }
