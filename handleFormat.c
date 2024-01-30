@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
 * handleFormat - print after specifier
@@ -39,6 +40,10 @@ int handleFormat(char Specifier, va_list PtrArg)
 	else if (Specifier == 'X')
 	{
 		Counter += printHexa(va_arg(PtrArg, unsigned int), 16);
+	}
+	else if (Specifier == '%')
+	{
+		Counter += write(1, "%", 1);
 	}
 	else
 	{
