@@ -1,35 +1,88 @@
 #include "main.h"
-
 /**
- * printInt - Print an integer
- * @number: The integer to print
- *
- * Return: The number of characters printed
+ * printInt - prints integer
+ * @Int: integer to print
+ * Return: number of characters printed
  */
-int printInt(int number)
+int printInt(int Int)
 {
-	int counterOfDigits;
+	int num, last = Int % 10, digit, exp = 1;
+	int  Counter = 1;
 
-	counterOfDigits = 0;
-	if (number == 0)
-	{
-		putchar(number + '0');
-		return (1);
-	}
-    /* Handle negative numbers */
-	if (number < 0)
+	Int = Int / 10;
+	num = Int;
+
+	if (last < 0)
 	{
 		putchar('-');
-		counterOfDigits++;
-		number = -number;
+		num = -num;
+		Int = -Int;
+		last = -last;
+		Counter++;
 	}
+	if (num > 0)
+	{
+		while (num / 10 != 0)
+		{
+			exp = exp * 10;
+			num = num / 10;
+		}
+		num = Int;
+		while (exp > 0)
+		{
+			digit = num / exp;
+			putchar(digit + '0');
+			num = num - (digit * exp);
+			exp = exp / 10;
+			Counter++;
+		}
+	}
+	putchar(last + '0');
 
-    /* Print digits in reverse order*/
-	if (number / 10 != 0)
-		counterOfDigits += printInt(number / 10);
+	return (Counter);
+}
 
-	putchar(number % 10 + '0');
-	counterOfDigits++;
+/**
+ * printDec - prints decimal
+ * @Dec: Decimal to print
+ * Return: number of characters printed
+ */
 
-	return (counterOfDigits);
+int printDec(int Dec)
+{
+	int num, last = Dec % 10, digit;
+	int  Counter = 1;
+	int exp = 1;
+
+	Dec = Dec / 10;
+	num = Dec;
+
+	if (last < 0)
+	{
+		putchar('-');
+		num = -num;
+		Dec = -Dec;
+		last = -last;
+		Counter++;
+	}
+	if (num > 0)
+	{
+		while (num / 10 != 0)
+		{
+			exp = exp * 10;
+			num = num / 10;
+		}
+		num = Dec;
+		while (exp > 0)
+		{
+			digit = num / exp;
+			putchar(digit + '0');
+			num = num - (digit * exp);
+			exp = exp / 10;
+			Counter++;
+		}
+	}
+	putchar(last + '0');
+
+	return (Counter);
 }
