@@ -36,6 +36,9 @@ int _printf(const char *format, ...)
 				case 's':
 					counter += printString(va_arg(ptrArgList, const char *));
 					break;
+				case 'd':
+					counter += printDec(va_arg(ptrArgList, int));
+					break;
 				case 'i':
 					counter += printInt(va_arg(ptrArgList, int));
 					break;

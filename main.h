@@ -12,8 +12,8 @@
 int printChar(int ch);
 int printString(const char *string);
 int _putchar(char c);
-int printInt(va_list args);
-int printDec(va_list args);
+int printInt(int Int);
+int printDec(int Dec);
 int _printf(const char *format, ...);
 
 #endif
