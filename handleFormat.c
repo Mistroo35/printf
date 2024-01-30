@@ -8,6 +8,7 @@
 * Return: Counter of chars
 */
 
+int handleFormat(char Specifier, va_list PtrArg);
 int handleFormat(char Specifier, va_list PtrArg)
 {
 	int Counter;
@@ -19,7 +20,7 @@ int handleFormat(char Specifier, va_list PtrArg)
 	}
 	else if (Specifier == 's')
 	{
-		Counter += printString(va_arg(PtrArg, char *));
+		Counter += printString(va_arg(PtrArg,  char *));
 	}
 	else if (Specifier == 'd' || Specifier == 'i')
 	{
