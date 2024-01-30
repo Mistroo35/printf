@@ -9,23 +9,23 @@ int printString(const char *String)
 {
 	int i, len;
 
-	len = strlen(String);
-	if (String != NULL)
+	if (String == NULL)
 	{
+		String = "(null)";
+		len = strlen(String);
 		for (i = 0; i < len; i++)
 		{
 			putchar(String[i]);
 		}
+		return (len);
 	}
 	else
 	{
-		const char *nill = "(null)";
-
-		len = strlen(nill);
+		len = strlen(String);
 		for (i = 0; i < len; i++)
 		{
-			putchar(nill[i]);
+			putchar(String[i]);
 		}
+		return (len);
 	}
-	return (len);
 }
