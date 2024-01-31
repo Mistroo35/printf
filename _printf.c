@@ -4,7 +4,7 @@
  * @Format: identifier to look for.
  * Return: the length of the string.
  */
-int _printf(const char * const Format, ...)
+int _printf(const char *Format, ...)
 {
 	HandleSpecifier Array[] = {
 		{"%s", printString}, {"%c", printChar}, {"%%", printf_37},
