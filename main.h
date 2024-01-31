@@ -1,26 +1,19 @@
 #ifndef MAIN_H
-
-/*Macro definitions*/
 #define MAIN_H
 
-/*Libraries*/
+/*Add libraries*/
 #include <stdarg.h>
-#include <unistd.h>
+#include <limits.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include <stdio.h>
-#include <limits.h>
-
-
-int printChar(int ch);
-int printString(const char *string);
-int printInt(int number);
-int printUnsignedInt(unsigned int num);
-int printOctal(unsigned int);
-int printBinary( unsigned int n);
-int printLowerHexa( unsigned int n);
-int printUpperHexa(unsigned int n);
-int _putchar(char c);
+/*prototypes*/
+int printChar(int Ch);
+int handleFormat(char Specifier, va_list PtrArg);
+int printDigit(long Number, int Base);
+int printHexa(long Number, int Base);
+int printString(char *String);
 int _printf(const char *format, ...);
 
 #endif

@@ -1,32 +1,35 @@
 #include "main.h"
+
 /**
-*printString - This function print string with speifer 's'
-*@string: string to printed
-*
-*Return: the length of string
+* printString - Function to print print string
+* @String: String to print
+* Return: Length of string
 */
 
-int printString(const char *string)
+int printString(char *String)
 {
-	int i, len;
+	int Counter;
 
-	len = strlen(string);
-	if (string != NULL)
+	Counter = 0;
+	if (String == NULL)
 	{
-		for (i = 0; i < len; i++)
+		String = "(null)";
+		while (*String)
 		{
-			_putchar(string[i]);
+			printChar((int)*String);
+			++Counter;
+			++String;
 		}
+		return (Counter);
 	}
 	else
 	{
-		const char *nill = "nill";
-
-		len = strlen(nill);
-		for (i = 0; i < len; i++)
+		while (*String)
 		{
-			_putchar(nill[i]);
+			printChar((int)*String);
+			++Counter;
+			++String;
 		}
 	}
-	return (len);
+	return (Counter);
 }
