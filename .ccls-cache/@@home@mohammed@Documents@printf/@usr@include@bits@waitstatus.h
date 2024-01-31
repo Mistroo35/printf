@@ -52,7 +52,7 @@
 /* Nonzero if STATUS indicates the child dumped core.  */
 #define	__WCOREDUMP(status)	((status) & __WCOREFLAG)
 
-/* Macros for constructing status values.  */
+/* Macros for constructing status PtrArgues.  */
 #define	__W_EXITCODE(ret, sig)	((ret) << 8 | (sig))
 #define	__W_STOPCODE(sig)	((sig) << 8 | 0x7f)
 #define __W_CONTINUED		0xffff

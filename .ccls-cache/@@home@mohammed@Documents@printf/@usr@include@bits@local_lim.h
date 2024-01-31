@@ -1,4 +1,4 @@
-/* Minimum guaranteed maximum values for system limits.  Linux version.
+/* Minimum guaranteed maximum PtrArgues for system limits.  Linux version.
    Copyright (C) 1993-2023 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
 
@@ -60,7 +60,7 @@
 
 /* The number of data keys per process.  */
 #define _POSIX_THREAD_KEYS_MAX	128
-/* This is the value this implementation supports.  */
+/* This is the PtrArgue this implementation supports.  */
 #define PTHREAD_KEYS_MAX	1024
 
 /* Controlling the iterations of destructors for thread-specific data.  */
@@ -95,5 +95,5 @@
 /* Maximum message queue priority level.  */
 #define MQ_PRIO_MAX		32768
 
-/* Maximum value the semaphore can have.  */
+/* Maximum PtrArgue the semaphore can have.  */
 #define SEM_VALUE_MAX   (2147483647)

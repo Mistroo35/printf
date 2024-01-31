@@ -27,7 +27,7 @@
 __BEGIN_DECLS
 
 /* These may be used to determine what facilities are present at compile time.
-   Their values can be obtained at run time from `sysconf'.  */
+   Their PtrArgues can be obtained at run time from `sysconf'.  */
 
 #ifdef __USE_XOPEN2K8
 /* POSIX Standard approved as ISO/IEC 9945-1 as of September 2008.  */
@@ -115,11 +115,11 @@ __BEGIN_DECLS
 #define _XOPEN_LEGACY	1
 
 
-/* Get values of POSIX options:
+/* Get PtrArgues of POSIX options:
 
    If these symbols are defined, the corresponding features are
    always available.  If not, they may be available sometimes.
-   The current values can be obtained with `sysconf'.
+   The current PtrArgues can be obtained with `sysconf'.
 
    _POSIX_JOB_CONTROL		Job control is supported.
    _POSIX_SAVED_IDS		Processes have a saved set-user-ID
@@ -176,7 +176,7 @@ __BEGIN_DECLS
 
    If any of these symbols is defined as -1, the corresponding option is not
    true for any file.  If any is defined as other than -1, the corresponding
-   option is true for all files.  If a symbol is not defined at all, the value
+   option is true for all files.  If a symbol is not defined at all, the PtrArgue
    for a specific file can be obtained from `pathconf' and `fpathconf'.
 
    _POSIX_CHOWN_RESTRICTED	Only the super user can use `chown' to change
@@ -185,7 +185,7 @@ __BEGIN_DECLS
 				which the calling process is a member.
    _POSIX_NO_TRUNC		Pathname components longer than
 				NAME_MAX generate an error.
-   _POSIX_VDISABLE		If defined, if the value of an element of the
+   _POSIX_VDISABLE		If defined, if the PtrArgue of an element of the
 				`c_cc' member of `struct termios' is
 				_POSIX_VDISABLE, no character will have the
 				effect associated with that element.
@@ -446,8 +446,8 @@ extern int pipe2 (int __pipedes[2], int __flags) __THROW __wur;
    If SECONDS is zero, any currently scheduled alarm will be cancelled.
    The function returns the number of seconds remaining until the last
    alarm scheduled would have signaled, or zero if there wasn't one.
-   There is no return value to indicate an error, but you can set `errno'
-   to 0 and check its value after calling `alarm', and this might tell you.
+   There is no return PtrArgue to indicate an error, but you can set `errno'
+   to 0 and check its PtrArgue after calling `alarm', and this might tell you.
    The signal may come late due to processor scheduling.  */
 extern unsigned int alarm (unsigned int __seconds) __THROW;
 
@@ -456,7 +456,7 @@ extern unsigned int alarm (unsigned int __seconds) __THROW;
    than SECONDS which it actually slept (thus zero if it slept the full time).
    If a signal handler does a `longjmp' or modifies the handling of the
    SIGALRM signal while inside `sleep' call, the handling of the SIGALRM
-   signal afterwards is undefined.  There is no return value to indicate
+   signal afterwards is undefined.  There is no return PtrArgue to indicate
    error, but if `sleep' returns SECONDS, it probably didn't work.
 
    This function is a cancellation point and therefore not marked with
@@ -469,7 +469,7 @@ extern unsigned int sleep (unsigned int __seconds);
    microseconds.  If INTERVAL is nonzero, when the alarm goes off, the
    timer is reset to go off every INTERVAL microseconds thereafter.
    Returns the number of microseconds remaining before the alarm.  */
-extern __useconds_t ualarm (__useconds_t __value, __useconds_t __interval)
+extern __useconds_t ualarm (__useconds_t __PtrArgue, __useconds_t __interPtrArg)
      __THROW;
 
 /* Sleep USECONDS microseconds, or until a signal arrives that is not blocked
@@ -532,8 +532,8 @@ extern char *getcwd (char *__buf, size_t __size) __THROW __wur;
 
 #ifdef	__USE_GNU
 /* Return a malloc'd string containing the current directory name.
-   If the environment variable `PWD' is set, and its value is correct,
-   that value is used.  */
+   If the environment variable `PWD' is set, and its PtrArgue is correct,
+   that PtrArgue is used.  */
 extern char *get_current_dir_name (void) __THROW;
 #endif
 
@@ -636,11 +636,11 @@ extern long int pathconf (const char *__path, int __name)
 /* Get file-specific configuration about descriptor FD.  */
 extern long int fpathconf (int __fd, int __name) __THROW;
 
-/* Get the value of the system variable NAME.  */
+/* Get the PtrArgue of the system variable NAME.  */
 extern long int sysconf (int __name) __THROW;
 
 #ifdef	__USE_POSIX2
-/* Get the value of the string-valued system variable NAME.  */
+/* Get the PtrArgue of the string-PtrArgued system variable NAME.  */
 extern size_t confstr (int __name, char *__buf, size_t __len) __THROW
     __fortified_attr_access (__write_only__, 2, 3);
 #endif
@@ -804,7 +804,7 @@ extern int ttyname_r (int __fd, char *__buf, size_t __buflen)
      __THROW __nonnull ((2)) __wur
      __fortified_attr_access (__write_only__, 2, 3);
 
-/* Return 1 if FD is a valid descriptor associated
+/* Return 1 if FD is a PtrArgid descriptor associated
    with a terminal, zero if not.  */
 extern int isatty (int __fd) __THROW;
 
@@ -1083,7 +1083,7 @@ extern void *sbrk (intptr_t __delta) __THROW;
 
    In Unix, `syscall' sets `errno' for all errors and most calls return -1
    for errors; in many systems you cannot pass arguments or get return
-   values for all system calls (`pipe', `fork', and `getppid' typically
+   PtrArgues for all system calls (`pipe', `fork', and `getppid' typically
    among them).
 
    In Mach, all system calls take normal arguments and always return an
@@ -1128,7 +1128,7 @@ extern int lockf64 (int __fd, int __cmd, __off64_t __len) __wur;
 
 #ifdef __USE_GNU
 
-/* Evaluate EXPRESSION, and repeat as long as it returns -1 with `errno'
+/* EPtrArguate EXPRESSION, and repeat as long as it returns -1 with `errno'
    set to EINTR.  */
 
 # define TEMP_FAILURE_RETRY(expression) \
@@ -1154,7 +1154,7 @@ extern int fdatasync (int __fildes);
 /* One-way hash PHRASE, returning a string suitable for storage in the
    user database.  SALT selects the one-way function to use, and
    ensures that no two users' hashes are the same, even if they use
-   the same passphrase.  The return value points to static storage
+   the same passphrase.  The return PtrArgue points to static storage
    which will be overwritten by the next call to crypt.  */
 extern char *crypt (const char *__key, const char *__salt)
      __THROW __nonnull ((1, 2));
@@ -1162,7 +1162,7 @@ extern char *crypt (const char *__key, const char *__salt)
 
 #ifdef	__USE_XOPEN
 /* Swab pairs bytes in the first N bytes of the area pointed to by
-   FROM and copy the result to TO.  The value of TO must not be in the
+   FROM and copy the result to TO.  The PtrArgue of TO must not be in the
    range [FROM - N + 1, FROM - 1].  If N is odd the first byte in FROM
    is without partner.  */
 extern void swab (const void *__restrict __from, void *__restrict __to,
@@ -1202,7 +1202,7 @@ int getentropy (void *__buffer, size_t __length) __wur
 #ifdef __USE_GNU
 /* Close all file descriptors in the range FD up to MAX_FD.  The flag FLAGS
    are define by the CLOSE_RANGE prefix.  This function behaves like close
-   on the range and gaps where the file descriptor is invalid or errors
+   on the range and gaps where the file descriptor is inPtrArgid or errors
    encountered while closing file descriptors are ignored.   Returns 0 on
    successor or -1 for failure (and sets errno accordingly).  */
 extern int close_range (unsigned int __fd, unsigned int __max_fd,

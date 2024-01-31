@@ -29,7 +29,7 @@ __BEGIN_DECLS
 
 /* For communication from 'getopt' to the caller.
    When 'getopt' finds an option that takes an argument,
-   the argument value is returned here.
+   the argument PtrArgue is returned here.
    Also, when 'ordering' is RETURN_IN_ORDER,
    each non-option ARGV-element is returned here.  */
 

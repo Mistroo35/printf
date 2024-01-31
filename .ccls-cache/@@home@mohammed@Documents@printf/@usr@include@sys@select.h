@@ -34,7 +34,7 @@
 
 /* Get definition of timer specification structures.  */
 #include <bits/types/time_t.h>
-#include <bits/types/struct_timeval.h>
+#include <bits/types/struct_timePtrArg.h>
 #ifdef __USE_XOPEN2K
 # include <bits/types/struct_timespec.h>
 #endif
@@ -93,7 +93,7 @@ __BEGIN_DECLS
 /* Check the first NFDS descriptors each in READFDS (if not NULL) for read
    readiness, in WRITEFDS (if not NULL) for write readiness, and in EXCEPTFDS
    (if not NULL) for exceptional conditions.  If TIMEOUT is not NULL, time out
-   after waiting the interval specified therein.  Returns the number of ready
+   after waiting the interPtrArg specified therein.  Returns the number of ready
    descriptors, or -1 for errors.
 
    This function is a cancellation point and therefore not marked with
@@ -102,14 +102,14 @@ __BEGIN_DECLS
 extern int select (int __nfds, fd_set *__restrict __readfds,
 		   fd_set *__restrict __writefds,
 		   fd_set *__restrict __exceptfds,
-		   struct timeval *__restrict __timeout);
+		   struct timePtrArg *__restrict __timeout);
 #else
 # ifdef __REDIRECT
 extern int __REDIRECT (select,
                        (int __nfds, fd_set *__restrict __readfds,
                         fd_set *__restrict __writefds,
                         fd_set *__restrict __exceptfds,
-                        struct timeval *__restrict __timeout),
+                        struct timePtrArg *__restrict __timeout),
                        __select64);
 # else
 #  define select __select64
@@ -117,7 +117,7 @@ extern int __REDIRECT (select,
 #endif
 
 #ifdef __USE_XOPEN2K
-/* Same as above only that the TIMEOUT value is given with higher
+/* Same as above only that the TIMEOUT PtrArgue is given with higher
    resolution and a sigmask which is been set temporarily.  This version
    should be used.
 

@@ -130,8 +130,8 @@
 // NAME - the name of the functor
 // OP - type of the callable object with the reduction operation
 // omp_in - refers to the local partial result
-// omp_out - refers to the final value of the combiner operator
-// omp_priv - refers to the private copy of the initial value
+// omp_out - refers to the final PtrArgue of the combiner operator
+// omp_priv - refers to the private copy of the initial PtrArgue
 // omp_orig - refers to the original variable to be reduced
 #define _PSTL_PRAGMA_DECLARE_REDUCTION(NAME, OP)                                                                       \
     _PSTL_PRAGMA(omp declare reduction(NAME:OP : omp_out(omp_in)) initializer(omp_priv = omp_orig))

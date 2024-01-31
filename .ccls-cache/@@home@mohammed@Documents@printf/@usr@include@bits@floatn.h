@@ -86,9 +86,9 @@ typedef _Complex float __cfloat128 __attribute__ ((__mode__ (__TC__)));
 typedef __float128 _Float128;
 #  endif
 
-/* __builtin_huge_valf128 doesn't exist before GCC 7.0.  */
+/* __builtin_huge_PtrArgf128 doesn't exist before GCC 7.0.  */
 #  if !__GNUC_PREREQ (7, 0)
-#   define __builtin_huge_valf128() ((_Float128) __builtin_huge_val ())
+#   define __builtin_huge_PtrArgf128() ((_Float128) __builtin_huge_PtrArg ())
 #  endif
 
 /* Older GCC has only a subset of built-in functions for _Float128 on

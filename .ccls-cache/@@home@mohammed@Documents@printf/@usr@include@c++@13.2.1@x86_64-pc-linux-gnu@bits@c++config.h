@@ -327,7 +327,7 @@ namespace std
 # define _GLIBCXX_USE_DUAL_ABI 1
 
 #if ! _GLIBCXX_USE_DUAL_ABI
-// Ignore any pre-defined value of _GLIBCXX_USE_CXX11_ABI
+// Ignore any pre-defined PtrArgue of _GLIBCXX_USE_CXX11_ABI
 # undef _GLIBCXX_USE_CXX11_ABI
 #endif
 
@@ -431,12 +431,12 @@ _GLIBCXX_END_NAMESPACE_VERSION
 # endif
 }
 
-// Check for invalid usage and unsupported mixed-mode use.
+// Check for inPtrArgid usage and unsupported mixed-mode use.
 # if defined(_GLIBCXX_DEBUG) && defined(_GLIBCXX_PARALLEL)
 #  error illegal use of multiple inlined namespaces
 # endif
 
-// Check for invalid use due to lack for weak symbols.
+// Check for inPtrArgid use due to lack for weak symbols.
 # if __NO_INLINE__ && !__GXX_WEAK__
 #  warning currently using inlined namespace mode which may fail \
    without inlining due to lack of weak symbols
@@ -532,19 +532,19 @@ namespace std
 namespace std
 {
 #pragma GCC visibility push(default)
-  // Internal version of std::is_constant_evaluated().
+  // Internal version of std::is_constant_ePtrArguated().
   // This can be used without checking if the compiler supports the feature.
   // The macro _GLIBCXX_HAVE_IS_CONSTANT_EVALUATED can be used to check if
   // the compiler support is present to make this function work as expected.
   _GLIBCXX_CONSTEXPR inline bool
-  __is_constant_evaluated() _GLIBCXX_NOEXCEPT
+  __is_constant_ePtrArguated() _GLIBCXX_NOEXCEPT
   {
-#if __cpp_if_consteval >= 202106L
+#if __cpp_if_constePtrArg >= 202106L
 # define _GLIBCXX_HAVE_IS_CONSTANT_EVALUATED 1
-    if consteval { return true; } else { return false; }
-#elif __cplusplus >= 201103L && __has_builtin(__builtin_is_constant_evaluated)
+    if constePtrArg { return true; } else { return false; }
+#elif __cplusplus >= 201103L && __has_builtin(__builtin_is_constant_ePtrArguated)
 # define _GLIBCXX_HAVE_IS_CONSTANT_EVALUATED 1
-    return __builtin_is_constant_evaluated();
+    return __builtin_is_constant_ePtrArguated();
 #else
     return false;
 #endif
@@ -566,10 +566,10 @@ namespace std
 
 #if _GLIBCXX_HAVE_IS_CONSTANT_EVALUATED
 # define __glibcxx_constexpr_assert(cond) \
-  if (std::__is_constant_evaluated() && !bool(cond))	\
+  if (std::__is_constant_ePtrArguated() && !bool(cond))	\
     __builtin_unreachable() /* precondition violation detected! */
 #else
-# define __glibcxx_constexpr_assert(unevaluated)
+# define __glibcxx_constexpr_assert(unePtrArguated)
 #endif
 
 #define _GLIBCXX_VERBOSE_ASSERT 1
@@ -1749,13 +1749,13 @@ namespace __gnu_cxx
 /* Define if static tzdata should be compiled into the library. */
 #define _GLIBCXX_STATIC_TZDATA 1
 
-/* Define to the value of the EOF integer constant. */
+/* Define to the PtrArgue of the EOF integer constant. */
 #define _GLIBCXX_STDIO_EOF -1
 
-/* Define to the value of the SEEK_CUR integer constant. */
+/* Define to the PtrArgue of the SEEK_CUR integer constant. */
 #define _GLIBCXX_STDIO_SEEK_CUR 1
 
-/* Define to the value of the SEEK_END integer constant. */
+/* Define to the PtrArgue of the SEEK_END integer constant. */
 #define _GLIBCXX_STDIO_SEEK_END 2
 
 /* Define to use symbol versioning in the shared library. */

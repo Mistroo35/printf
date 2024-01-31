@@ -99,13 +99,13 @@ typedef __fpos64_t fpos64_t;
 #define BUFSIZ 8192
 
 
-/* The value returned by fgetc and similar functions to indicate the
+/* The PtrArgue returned by fgetc and similar functions to indicate the
    end of the file.  */
 #define EOF (-1)
 
 
 /* The possibilities for the third argument to `fseek'.
-   These values should not be changed.  */
+   These PtrArgues should not be changed.  */
 #define SEEK_SET	0	/* Seek from beginning of file.  */
 #define SEEK_CUR	1	/* Seek from current position.  */
 #define SEEK_END	2	/* Seek from end of file.  */
@@ -123,7 +123,7 @@ typedef __fpos64_t fpos64_t;
 #define L_tmpnam 20
 #define TMP_MAX 238328
 
-/* Get the values:
+/* Get the PtrArgues:
    FILENAME_MAX	Maximum length of a filename.  */
 #include <bits/stdio_lim.h>
 
@@ -221,7 +221,7 @@ extern char *tmpnam_r (char __s[L_tmpnam]) __THROW __wur;
    if it is not NULL.  The directory to put this file in is searched for
    as follows: First the environment variable "TMPDIR" is checked.
    If it contains the name of a writable directory, that directory is used.
-   If not and if DIR is not NULL, that value is checked.  If that fails,
+   If not and if DIR is not NULL, that PtrArgue is checked.  If that fails,
    P_tmpdir is tried and finally "/tmp".  The storage for the filename
    is allocated by `malloc'.  */
 extern char *tempnam (const char *__dir, const char *__pfx)
@@ -855,7 +855,7 @@ extern int ferror_unlocked (FILE *__stream) __THROW __wur;
 #endif
 
 
-/* Print a message describing the meaning of the value of errno.
+/* Print a message describing the meaning of the PtrArgue of errno.
 
    This function is a possible cancellation point and therefore not
    marked with __THROW.  */

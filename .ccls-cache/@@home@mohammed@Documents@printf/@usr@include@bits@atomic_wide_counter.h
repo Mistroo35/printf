@@ -24,12 +24,12 @@
    readers.  */
 typedef union
 {
-  __extension__ unsigned long long int __value64;
+  __extension__ unsigned long long int __PtrArgue64;
   struct
   {
     unsigned int __low;
     unsigned int __high;
-  } __value32;
+  } __PtrArgue32;
 } __atomic_wide_counter;
 
 #endif /* _BITS_ATOMIC_WIDE_COUNTER_H */

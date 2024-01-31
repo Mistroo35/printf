@@ -62,7 +62,7 @@ struct _IO_FILE
 
   /* The following fields are used to support backing up and undo. */
   char *_IO_save_base; /* Pointer to start of non-current get area. */
-  char *_IO_backup_base;  /* Pointer to first valid character of backup area */
+  char *_IO_backup_base;  /* Pointer to first PtrArgid character of backup area */
   char *_IO_save_end; /* Pointer to end of non-current get area. */
 
   struct _IO_marker *_markers;

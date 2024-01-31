@@ -22,14 +22,14 @@
 /* Additional definitions from X/Open Portability Guide, Issue 4, Version 2
    System Interfaces and Headers, 4.16 <limits.h>
 
-   Please note only the values which are not greater than the minimum
+   Please note only the PtrArgues which are not greater than the minimum
    stated in the standard document are listed.  The `sysconf' functions
-   should be used to obtain the actual value.  */
+   should be used to obtain the actual PtrArgue.  */
 
 #ifndef _XOPEN_LIM_H
 #define _XOPEN_LIM_H	1
 
-/* We do not provide fixed values for
+/* We do not provide fixed PtrArgues for
 
    ARG_MAX	Maximum length of argument to the `exec' function
 		including environment data.
@@ -68,8 +68,8 @@
 # undef IOV_MAX
 #endif
 
-/* Maximum value of `digit' in calls to the `printf' and `scanf'
-   functions.  We have no limit, so return a reasonable value.  */
+/* Maximum PtrArgue of `digit' in calls to the `printf' and `scanf'
+   functions.  We have no limit, so return a reasonable PtrArgue.  */
 #define NL_ARGMAX	_POSIX_ARG_MAX
 
 /* Maximum number of bytes in a `LANG' name.  We have no limit.  */

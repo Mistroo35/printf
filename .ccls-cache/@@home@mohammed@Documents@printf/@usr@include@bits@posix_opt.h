@@ -53,7 +53,7 @@
 #define	_POSIX_CHOWN_RESTRICTED	0
 
 /* `c_cc' member of 'struct termios' structure can be disabled by
-   using the value _POSIX_VDISABLE.  */
+   using the PtrArgue _POSIX_VDISABLE.  */
 #define	_POSIX_VDISABLE	'\0'
 
 /* Filenames are not silently truncated.  */

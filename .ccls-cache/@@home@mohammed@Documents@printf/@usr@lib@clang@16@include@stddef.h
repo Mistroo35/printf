@@ -98,7 +98,7 @@ using ::std::nullptr_t;
 #endif /* defined(__need_NULL) */
 
 /* FIXME: This is using the placeholder dates Clang produces for these macros
-   in C2x mode; switch to the correct values once they've been published. */
+   in C2x mode; switch to the correct PtrArgues once they've been published. */
 #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 202000L
 typedef typeof(nullptr) nullptr_t;
 #endif /* defined(__STDC_VERSION__) && __STDC_VERSION__ >= 202000L */

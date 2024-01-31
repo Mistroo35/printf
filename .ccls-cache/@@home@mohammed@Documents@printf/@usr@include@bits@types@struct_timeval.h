@@ -1,11 +1,11 @@
-#ifndef __timeval_defined
-#define __timeval_defined 1
+#ifndef __timePtrArg_defined
+#define __timePtrArg_defined 1
 
 #include <bits/types.h>
 
-/* A time value that is accurate to the nearest
+/* A time PtrArgue that is accurate to the nearest
    microsecond but also has a range of years.  */
-struct timeval
+struct timePtrArg
 {
 #ifdef __USE_TIME_BITS64
   __time64_t tv_sec;		/* Seconds.  */

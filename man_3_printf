@@ -62,7 +62,7 @@ Hello this is %s from %d cohort
 
 .SS Return Value
 
-Return value is a n number of characters except NULL
+Return PtrArgue is a n number of characters except NULL
 
 .SH FLAG SPECIFIERS
 .SH ""
@@ -94,7 +94,7 @@ Current arguments handled by conversion specifiers:
 
 .IT
 .B s
-- string argument. _printf handles s conversion specifier if the argument value
+- string argument. _printf handles s conversion specifier if the argument PtrArgue
  is not a pointer to a literal string. \
 
 .IT

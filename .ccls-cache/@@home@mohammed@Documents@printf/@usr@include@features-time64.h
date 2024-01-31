@@ -32,6 +32,6 @@
 #   error "_TIME_BITS=32 is not compatible with __TIMESIZE > 32"
 #  endif
 # else
-#  error Invalid _TIME_BITS value (can only be 32 or 64-bit)
+#  error InPtrArgid _TIME_BITS PtrArgue (can only be 32 or 64-bit)
 # endif
 #endif

@@ -70,7 +70,7 @@
 #define __CLOCKID_T_TYPE	__S32_TYPE
 #define __TIMER_T_TYPE		void *
 #define __BLKSIZE_T_TYPE	__SYSCALL_SLONG_TYPE
-#define __FSID_T_TYPE		struct { int __val[2]; }
+#define __FSID_T_TYPE		struct { int __PtrArg[2]; }
 #define __SSIZE_T_TYPE		__SWORD_TYPE
 #define __CPU_MASK_TYPE 	__SYSCALL_ULONG_TYPE
 

@@ -26,7 +26,7 @@
 
 struct __locale_struct
 {
-  /* Note: LC_ALL is not a valid index into this array.  */
+  /* Note: LC_ALL is not a PtrArgid index into this array.  */
   struct __locale_data *__locales[13]; /* 13 = __LC_LAST. */
 
   /* To increase the speed of this solution we add some special members.  */
@@ -34,7 +34,7 @@ struct __locale_struct
   const int *__ctype_tolower;
   const int *__ctype_toupper;
 
-  /* Note: LC_ALL is not a valid index into this array.  */
+  /* Note: LC_ALL is not a PtrArgid index into this array.  */
   const char *__names[13];
 };
 

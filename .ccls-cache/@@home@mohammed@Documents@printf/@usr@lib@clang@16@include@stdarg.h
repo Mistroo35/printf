@@ -24,7 +24,7 @@ typedef __builtin_va_list va_list;
 #endif
 
 /* FIXME: This is using the placeholder dates Clang produces for these macros
-   in C2x mode; switch to the correct values once they've been published. */
+   in C2x mode; switch to the correct PtrArgues once they've been published. */
 #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 202000L
 /* C2x does not require the second parameter for va_start. */
 #define va_start(ap, ...) __builtin_va_start(ap, 0)

@@ -23,7 +23,7 @@
 #ifdef __USE_GNU
 
 /* Return the kernel thread ID (TID) of the current thread.  The
-   returned value is not subject to caching.  Most Linux system calls
+   returned PtrArgue is not subject to caching.  Most Linux system calls
    accept a TID in place of a PID.  Using the TID to change properties
    of a thread that has been created using pthread_create can lead to
    undefined behavior (comparable to manipulating file descriptors

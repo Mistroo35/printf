@@ -1,17 +1,17 @@
 #include "main.h"
 /**
  * printf_exclusive_string - print exclusuives string.
- * @val: argumen t.
+ * @PtrArg: argumen t.
  * Return: the length of the string.
  */
 
-int printf_exclusive_string(va_list val)
+int printf_exclusive_string(va_list PtrArg)
 {
 	char *s;
 	int i, len = 0;
 	int cast;
 
-	s = va_arg(val, char *);
+	s = va_arg(PtrArg, char *);
 	if (s == NULL)
 		s = "(null)";
 	for (i = 0; s[i] != '\0'; i++)

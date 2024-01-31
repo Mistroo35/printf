@@ -26,7 +26,7 @@
 
 #include <bits/wordsize.h>
 
-/* These are the standard-mandated minimum values.  */
+/* These are the standard-mandated minimum PtrArgues.  */
 
 /* Minimum number of operations in one list I/O call.  */
 #define _POSIX_AIO_LISTIO_MAX	2
@@ -100,7 +100,7 @@
 #define	_POSIX_PIPE_BUF		512
 
 /* The number of repeated occurrences of a BRE permitted by the
-   REGEXEC and REGCOMP functions when using the interval notation.  */
+   REGEXEC and REGCOMP functions when using the interPtrArg notation.  */
 #define _POSIX_RE_DUP_MAX	255
 
 /* Minimal number of realtime signals reserved for the application.  */
@@ -109,13 +109,13 @@
 /* Number of semaphores a process can have.  */
 #define _POSIX_SEM_NSEMS_MAX	256
 
-/* Maximal value of a semaphore.  */
+/* Maximal PtrArgue of a semaphore.  */
 #define _POSIX_SEM_VALUE_MAX	32767
 
 /* Number of pending realtime signals.  */
 #define _POSIX_SIGQUEUE_MAX	32
 
-/* Largest value of a `ssize_t'.  */
+/* Largest PtrArgue of a `ssize_t'.  */
 #define	_POSIX_SSIZE_MAX	32767
 
 /* Number of streams a process can have open at once.  */
@@ -157,7 +157,7 @@
 #define _POSIX_CLOCKRES_MIN	20000000
 
 
-/* Get the implementation-specific values for the above.  */
+/* Get the implementation-specific PtrArgues for the above.  */
 #include <bits/local_lim.h>
 
 
@@ -173,7 +173,7 @@
 #endif
 
 
-/* This value is a guaranteed minimum maximum.
+/* This PtrArgue is a guaranteed minimum maximum.
    The current maximum can be got from `sysconf'.  */
 
 #ifndef	NGROUPS_MAX

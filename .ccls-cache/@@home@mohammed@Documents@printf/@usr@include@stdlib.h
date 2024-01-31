@@ -525,8 +525,8 @@ extern void srandom (unsigned int __seed) __THROW;
 
 /* Initialize the random number generator to use state buffer STATEBUF,
    of length STATELEN, and seed it with SEED.  Optimal lengths are 8, 16,
-   32, 64, 128 and 256, the bigger the better; values less than 8 will
-   cause an error and values greater than 256 will be rounded down.  */
+   32, 64, 128 and 256, the bigger the better; PtrArgues less than 8 will
+   cause an error and PtrArgues greater than 256 will be rounded down.  */
 extern char *initstate (unsigned int __seed, char *__statebuf,
 			size_t __statelen) __THROW __nonnull ((2));
 
@@ -544,7 +544,7 @@ struct random_data
   {
     int32_t *fptr;		/* Front pointer.  */
     int32_t *rptr;		/* Rear pointer.  */
-    int32_t *state;		/* Array of state values.  */
+    int32_t *state;		/* Array of state PtrArgues.  */
     int rand_type;		/* Type of random number generator.  */
     int rand_deg;		/* Degree of random number generator.  */
     int rand_sep;		/* Distance between front and rear.  */
@@ -583,7 +583,7 @@ extern int rand_r (unsigned int *__seed) __THROW;
 #if defined __USE_MISC || defined __USE_XOPEN
 /* System V style 48-bit random number generator functions.  */
 
-/* Return non-negative, double-precision floating-point value in [0.0,1.0).  */
+/* Return non-negative, double-precision floating-point PtrArgue in [0.0,1.0).  */
 extern double drand48 (void) __THROW;
 extern double erand48 (unsigned short int __xsubi[3]) __THROW __nonnull ((1));
 
@@ -598,7 +598,7 @@ extern long int jrand48 (unsigned short int __xsubi[3])
      __THROW __nonnull ((1));
 
 /* Seed random number generator.  */
-extern void srand48 (long int __seedval) __THROW;
+extern void srand48 (long int __seedPtrArg) __THROW;
 extern unsigned short int *seed48 (unsigned short int __seed16v[3])
      __THROW __nonnull ((1));
 extern void lcong48 (unsigned short int __param[7]) __THROW __nonnull ((1));
@@ -617,7 +617,7 @@ struct drand48_data
 						   formula.  */
   };
 
-/* Return non-negative, double-precision floating-point value in [0.0,1.0).  */
+/* Return non-negative, double-precision floating-point PtrArgue in [0.0,1.0).  */
 extern int drand48_r (struct drand48_data *__restrict __buffer,
 		      double *__restrict __result) __THROW __nonnull ((1, 2));
 extern int erand48_r (unsigned short int __xsubi[3],
@@ -643,7 +643,7 @@ extern int jrand48_r (unsigned short int __xsubi[3],
      __THROW __nonnull ((1, 2));
 
 /* Seed random number generator.  */
-extern int srand48_r (long int __seedval, struct drand48_data *__buffer)
+extern int srand48_r (long int __seedPtrArg, struct drand48_data *__buffer)
      __THROW __nonnull ((2));
 
 extern int seed48_r (unsigned short int __seed16v[3],
@@ -709,7 +709,7 @@ extern void *reallocarray (void *__ptr, size_t __nmemb, size_t __size)
 #if (defined __USE_XOPEN_EXTENDED && !defined __USE_XOPEN2K) \
     || defined __USE_MISC
 /* Allocate SIZE bytes on a page boundary.  The storage cannot be freed.  */
-extern void *valloc (size_t __size) __THROW __attribute_malloc__
+extern void *PtrArgloc (size_t __size) __THROW __attribute_malloc__
      __attribute_alloc_size__ ((1)) __wur;
 #endif
 
@@ -769,7 +769,7 @@ extern void _Exit (int __status) __THROW __attribute__ ((__noreturn__));
 #endif
 
 
-/* Return the value of envariable NAME, or NULL if it doesn't exist.  */
+/* Return the PtrArgue of envariable NAME, or NULL if it doesn't exist.  */
 extern char *getenv (const char *__name) __THROW __nonnull ((1)) __wur;
 
 #ifdef __USE_GNU
@@ -788,8 +788,8 @@ extern int putenv (char *__string) __THROW __nonnull ((1));
 
 #ifdef __USE_XOPEN2K
 /* Set NAME to VALUE in the environment.
-   If REPLACE is nonzero, overwrite an existing value.  */
-extern int setenv (const char *__name, const char *__value, int __replace)
+   If REPLACE is nonzero, overwrite an existing PtrArgue.  */
+extern int setenv (const char *__name, const char *__PtrArgue, int __replace)
      __THROW __nonnull ((2));
 
 /* Remove the variable NAME from the environment.  */
@@ -976,7 +976,7 @@ extern void qsort_r (void *__base, size_t __nmemb, size_t __size,
 #endif
 
 
-/* Return the absolute value of X.  */
+/* Return the absolute PtrArgue of X.  */
 extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
 extern long int labs (long int __x) __THROW __attribute__ ((__const__)) __wur;
 
@@ -987,7 +987,7 @@ __extension__ extern long long int llabs (long long int __x)
 
 
 /* Return the `div_t', `ldiv_t' or `lldiv_t' representation
-   of the value of NUMER over DENOM. */
+   of the PtrArgue of NUMER over DENOM. */
 /* GCC may have built-ins for these someday.  */
 extern div_t div (int __numer, int __denom)
      __THROW __attribute__ ((__const__)) __wur;
@@ -1003,54 +1003,54 @@ __extension__ extern lldiv_t lldiv (long long int __numer,
 
 #if (defined __USE_XOPEN_EXTENDED && !defined __USE_XOPEN2K8) \
     || defined __USE_MISC
-/* Convert floating point numbers to strings.  The returned values are
-   valid only until another call to the same function.  */
+/* Convert floating point numbers to strings.  The returned PtrArgues are
+   PtrArgid only until another call to the same function.  */
 
 /* Convert VALUE to a string with NDIGIT digits and return a pointer to
    this.  Set *DECPT with the position of the decimal character and *SIGN
    with the sign of the number.  */
-extern char *ecvt (double __value, int __ndigit, int *__restrict __decpt,
+extern char *ecvt (double __PtrArgue, int __ndigit, int *__restrict __decpt,
 		   int *__restrict __sign) __THROW __nonnull ((3, 4)) __wur;
 
 /* Convert VALUE to a string rounded to NDIGIT decimal digits.  Set *DECPT
    with the position of the decimal character and *SIGN with the sign of
    the number.  */
-extern char *fcvt (double __value, int __ndigit, int *__restrict __decpt,
+extern char *fcvt (double __PtrArgue, int __ndigit, int *__restrict __decpt,
 		   int *__restrict __sign) __THROW __nonnull ((3, 4)) __wur;
 
 /* If possible convert VALUE to a string with NDIGIT significant digits.
    Otherwise use exponential representation.  The resulting string will
    be written to BUF.  */
-extern char *gcvt (double __value, int __ndigit, char *__buf)
+extern char *gcvt (double __PtrArgue, int __ndigit, char *__buf)
      __THROW __nonnull ((3)) __wur;
 #endif
 
 #ifdef __USE_MISC
 /* Long double versions of above functions.  */
-extern char *qecvt (long double __value, int __ndigit,
+extern char *qecvt (long double __PtrArgue, int __ndigit,
 		    int *__restrict __decpt, int *__restrict __sign)
      __THROW __nonnull ((3, 4)) __wur;
-extern char *qfcvt (long double __value, int __ndigit,
+extern char *qfcvt (long double __PtrArgue, int __ndigit,
 		    int *__restrict __decpt, int *__restrict __sign)
      __THROW __nonnull ((3, 4)) __wur;
-extern char *qgcvt (long double __value, int __ndigit, char *__buf)
+extern char *qgcvt (long double __PtrArgue, int __ndigit, char *__buf)
      __THROW __nonnull ((3)) __wur;
 
 
 /* Reentrant version of the functions above which provide their own
    buffers.  */
-extern int ecvt_r (double __value, int __ndigit, int *__restrict __decpt,
+extern int ecvt_r (double __PtrArgue, int __ndigit, int *__restrict __decpt,
 		   int *__restrict __sign, char *__restrict __buf,
 		   size_t __len) __THROW __nonnull ((3, 4, 5));
-extern int fcvt_r (double __value, int __ndigit, int *__restrict __decpt,
+extern int fcvt_r (double __PtrArgue, int __ndigit, int *__restrict __decpt,
 		   int *__restrict __sign, char *__restrict __buf,
 		   size_t __len) __THROW __nonnull ((3, 4, 5));
 
-extern int qecvt_r (long double __value, int __ndigit,
+extern int qecvt_r (long double __PtrArgue, int __ndigit,
 		    int *__restrict __decpt, int *__restrict __sign,
 		    char *__restrict __buf, size_t __len)
      __THROW __nonnull ((3, 4, 5));
-extern int qfcvt_r (long double __value, int __ndigit,
+extern int qfcvt_r (long double __PtrArgue, int __ndigit,
 		    int *__restrict __decpt, int *__restrict __sign,
 		    char *__restrict __buf, size_t __len)
      __THROW __nonnull ((3, 4, 5));
@@ -1081,7 +1081,7 @@ extern size_t wcstombs (char *__restrict __s,
   __attr_access ((__read_only__, 2));
 
 #ifdef __USE_MISC
-/* Determine whether the string value of RESPONSE matches the affirmation
+/* Determine whether the string PtrArgue of RESPONSE matches the affirmation
    or negative response expression as specified by the LC_MESSAGES category
    in the program's current locale.  Returns 1 if affirmative, 0 if
    negative, and -1 if not matching.  */
@@ -1092,13 +1092,13 @@ extern int rpmatch (const char *__response) __THROW __nonnull ((1)) __wur;
 #if defined __USE_XOPEN_EXTENDED || defined __USE_XOPEN2K8
 /* Parse comma separated suboption from *OPTIONP and match against
    strings in TOKENS.  If found return index and set *VALUEP to
-   optional value introduced by an equal sign.  If the suboption is
+   optional PtrArgue introduced by an equal sign.  If the suboption is
    not part of TOKENS return in *VALUEP beginning of unknown
    suboption.  On exit *OPTIONP is set to the beginning of the next
    token or at the terminating NUL character.  */
 extern int getsubopt (char **__restrict __optionp,
 		      char *const *__restrict __tokens,
-		      char **__restrict __valuep)
+		      char **__restrict __PtrArguep)
      __THROW __nonnull ((1, 2, 3)) __wur;
 #endif
 

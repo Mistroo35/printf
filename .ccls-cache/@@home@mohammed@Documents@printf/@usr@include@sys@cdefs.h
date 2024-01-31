@@ -37,7 +37,7 @@
 
 /* Compilers that lack __has_attribute may object to
        #if defined __has_attribute && __has_attribute (...)
-   even though they do not need to evaluate the right-hand side of the &&.
+   even though they do not need to ePtrArguate the right-hand side of the &&.
    Similarly for __has_builtin, etc.  */
 #if (defined __has_attribute \
      && (!defined __clang_minor__ \
@@ -161,7 +161,7 @@
 
 #if __USE_FORTIFY_LEVEL > 0
 /* Compile time conditions to choose between the regular, _chk and _chk_warn
-   variants.  These conditions should get evaluated to constant and optimized
+   variants.  These conditions should get ePtrArguated to constant and optimized
    away.  */
 
 #define __glibc_safe_len_cond(__l, __s, __osz) ((__l) <= (__osz) / (__s))
@@ -231,7 +231,7 @@
 # define __glibc_c99_flexarr_available 1
 #elif defined __GNUC__
 /* Pre-2.97 GCC did not support C99 flexible arrays but did have
-   an equivalent extension with slightly different notation.  */
+   an equiPtrArgent extension with slightly different notation.  */
 # define __flexarr	[0]
 # define __glibc_c99_flexarr_available 1
 #else
@@ -327,7 +327,7 @@
 # define __attribute_pure__ /* Ignore */
 #endif
 
-/* This declaration tells the compiler that the value is constant.  */
+/* This declaration tells the compiler that the PtrArgue is constant.  */
 #if __GNUC_PREREQ (2,5) || __glibc_has_attribute (__const__)
 # define __attribute_const__ __attribute__ ((__const__))
 #else

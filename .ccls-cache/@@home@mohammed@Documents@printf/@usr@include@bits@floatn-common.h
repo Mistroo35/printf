@@ -200,7 +200,7 @@ typedef float _Float16 __attribute__ ((__mode__ (__HF__)));
 #  endif
 
 #  if !__GNUC_PREREQ (7, 0)
-#   define __builtin_huge_valf16() ((_Float16) __builtin_huge_val ())
+#   define __builtin_huge_PtrArgf16() ((_Float16) __builtin_huge_PtrArg ())
 #   define __builtin_inff16() ((_Float16) __builtin_inf ())
 #   define __builtin_nanf16(x) ((_Float16) __builtin_nan (x))
 #   define __builtin_nansf16(x) ((_Float16) __builtin_nans (x))
@@ -215,7 +215,7 @@ typedef float _Float32;
 #  endif
 
 #  if !__GNUC_PREREQ (7, 0)
-#   define __builtin_huge_valf32() (__builtin_huge_valf ())
+#   define __builtin_huge_PtrArgf32() (__builtin_huge_PtrArgf ())
 #   define __builtin_inff32() (__builtin_inff ())
 #   define __builtin_nanf32(x) (__builtin_nanf (x))
 #   define __builtin_nansf32(x) (__builtin_nansf (x))
@@ -226,7 +226,7 @@ typedef float _Float32;
 # if __HAVE_FLOAT64
 
 /* If double, long double and _Float64 all have the same set of
-   values, TS 18661-3 requires the usual arithmetic conversions on
+   PtrArgues, TS 18661-3 requires the usual arithmetic conversions on
    long double and _Float64 to produce _Float64.  For this to be the
    case when building with a compiler without a distinct _Float64
    type, _Float64 must be a typedef for long double, not for
@@ -239,7 +239,7 @@ typedef long double _Float64;
 #   endif
 
 #   if !__GNUC_PREREQ (7, 0)
-#    define __builtin_huge_valf64() (__builtin_huge_vall ())
+#    define __builtin_huge_PtrArgf64() (__builtin_huge_PtrArgl ())
 #    define __builtin_inff64() (__builtin_infl ())
 #    define __builtin_nanf64(x) (__builtin_nanl (x))
 #    define __builtin_nansf64(x) (__builtin_nansl (x))
@@ -252,7 +252,7 @@ typedef double _Float64;
 #   endif
 
 #   if !__GNUC_PREREQ (7, 0)
-#    define __builtin_huge_valf64() (__builtin_huge_val ())
+#    define __builtin_huge_PtrArgf64() (__builtin_huge_PtrArg ())
 #    define __builtin_inff64() (__builtin_inf ())
 #    define __builtin_nanf64(x) (__builtin_nan (x))
 #    define __builtin_nansf64(x) (__builtin_nans (x))
@@ -269,7 +269,7 @@ typedef double _Float32x;
 #  endif
 
 #  if !__GNUC_PREREQ (7, 0)
-#   define __builtin_huge_valf32x() (__builtin_huge_val ())
+#   define __builtin_huge_PtrArgf32x() (__builtin_huge_PtrArg ())
 #   define __builtin_inff32x() (__builtin_inf ())
 #   define __builtin_nanf32x(x) (__builtin_nan (x))
 #   define __builtin_nansf32x(x) (__builtin_nans (x))
@@ -286,7 +286,7 @@ typedef long double _Float64x;
 #   endif
 
 #   if !__GNUC_PREREQ (7, 0)
-#    define __builtin_huge_valf64x() (__builtin_huge_vall ())
+#    define __builtin_huge_PtrArgf64x() (__builtin_huge_PtrArgl ())
 #    define __builtin_inff64x() (__builtin_infl ())
 #    define __builtin_nanf64x(x) (__builtin_nanl (x))
 #    define __builtin_nansf64x(x) (__builtin_nansl (x))
@@ -299,7 +299,7 @@ typedef _Float128 _Float64x;
 #   endif
 
 #   if !__GNUC_PREREQ (7, 0)
-#    define __builtin_huge_valf64x() (__builtin_huge_valf128 ())
+#    define __builtin_huge_PtrArgf64x() (__builtin_huge_PtrArgf128 ())
 #    define __builtin_inff64x() (__builtin_inff128 ())
 #    define __builtin_nanf64x(x) (__builtin_nanf128 (x))
 #    define __builtin_nansf64x(x) (__builtin_nansf128 (x))
@@ -316,7 +316,7 @@ typedef _Float128 _Float64x;
 #  endif
 
 #  if !__GNUC_PREREQ (7, 0)
-#   define __builtin_huge_valf128x() ((_Float128x) __builtin_huge_val ())
+#   define __builtin_huge_PtrArgf128x() ((_Float128x) __builtin_huge_PtrArg ())
 #   define __builtin_inff128x() ((_Float128x) __builtin_inf ())
 #   define __builtin_nanf128x(x) ((_Float128x) __builtin_nan (x))
 #   define __builtin_nansf128x(x) ((_Float128x) __builtin_nans (x))

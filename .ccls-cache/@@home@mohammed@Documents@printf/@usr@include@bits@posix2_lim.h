@@ -23,13 +23,13 @@
 #define	_BITS_POSIX2_LIM_H	1
 
 
-/* The maximum `ibase' and `obase' values allowed by the `bc' utility.  */
+/* The maximum `ibase' and `obase' PtrArgues allowed by the `bc' utility.  */
 #define	_POSIX2_BC_BASE_MAX		99
 
 /* The maximum number of elements allowed in an array by the `bc' utility.  */
 #define	_POSIX2_BC_DIM_MAX		2048
 
-/* The maximum `scale' value allowed by the `bc' utility.  */
+/* The maximum `scale' PtrArgue allowed by the `bc' utility.  */
 #define	_POSIX2_BC_SCALE_MAX		99
 
 /* The maximum length of a string constant accepted by the `bc' utility.  */
@@ -47,7 +47,7 @@
 #define	_POSIX2_LINE_MAX		2048
 
 /* The maximum number of repeated occurrences of a regular expression
-   permitted when using the interval notation `\{M,N\}'.  */
+   permitted when using the interPtrArg notation `\{M,N\}'.  */
 #define	_POSIX2_RE_DUP_MAX		255
 
 /* The maximum number of bytes in a character class name.  We have no
@@ -55,9 +55,9 @@
 #define	_POSIX2_CHARCLASS_NAME_MAX	14
 
 
-/* These values are implementation-specific,
+/* These PtrArgues are implementation-specific,
    and may vary within the implementation.
-   Their precise values can be obtained from sysconf.  */
+   Their precise PtrArgues can be obtained from sysconf.  */
 
 #ifndef	BC_BASE_MAX
 #define	BC_BASE_MAX		_POSIX2_BC_BASE_MAX
@@ -84,7 +84,7 @@
 #define	CHARCLASS_NAME_MAX	2048
 #endif
 
-/* This value is defined like this in regex.h.  */
+/* This PtrArgue is defined like this in regex.h.  */
 #define	RE_DUP_MAX (0x7fff)
 
 #endif	/* bits/posix2_lim.h */

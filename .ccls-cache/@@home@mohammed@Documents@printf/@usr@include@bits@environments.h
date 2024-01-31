@@ -22,7 +22,7 @@
 #include <bits/wordsize.h>
 
 /* This header should define the following symbols under the described
-   situations.  A value `1' means that the model is always supported,
+   situations.  A PtrArgue `1' means that the model is always supported,
    `-1' means it is never supported.  Undefined means it cannot be
    statically decided.
 

@@ -20,7 +20,7 @@
 #define _BITS_ENDIAN_H 1
 
 /* Definitions for byte order, according to significance of bytes,
-   from low addresses to high addresses.  The value is what you get by
+   from low addresses to high addresses.  The PtrArgue is what you get by
    putting '4' in the most significant byte, '3' in the second most
    significant byte, '2' in the second least significant byte, and '1'
    in the least significant byte, and then writing down one digit for
@@ -35,7 +35,7 @@
 #include <bits/endianness.h>
 
 /* Some machines may need to use a different endianness for floating point
-   values.  */
+   PtrArgues.  */
 #ifndef __FLOAT_WORD_ORDER
 # define __FLOAT_WORD_ORDER __BYTE_ORDER
 #endif

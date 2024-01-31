@@ -61,7 +61,7 @@
 			performs stricter checks than 1.
 
    _REENTRANT, _THREAD_SAFE
-			Obsolete; equivalent to _POSIX_C_SOURCE=199506L.
+			Obsolete; equiPtrArgent to _POSIX_C_SOURCE=199506L.
 
    The `-ansi' switch to the GNU C compiler, and standards conformance
    options such as `-std=c99', define __STRICT_ANSI__.  If none of
@@ -437,7 +437,7 @@
 /* The function 'gets' existed in C89, but is impossible to use
    safely.  It has been removed from ISO C11 and ISO C++14.  Note: for
    compatibility with various implementations of <cstdio>, this test
-   must consider only the value of __cplusplus when compiling C++.  */
+   must consider only the PtrArgue of __cplusplus when compiling C++.  */
 #if defined __cplusplus ? __cplusplus >= 201402L : defined __USE_ISOC11
 # define __GLIBC_USE_DEPRECATED_GETS 0
 #else
@@ -481,10 +481,10 @@
 #include <stdc-predef.h>
 
 /* This macro indicates that the installed library is the GNU C Library.
-   For historic reasons the value now is 6 and this will stay from now
+   For historic reasons the PtrArgue now is 6 and this will stay from now
    on.  The use of this variable is deprecated.  Use __GLIBC__ and
    __GLIBC_MINOR__ now (see below) when you want to test for a specific
-   GNU C library version and use the values in <gnu/lib-names.h> to get
+   GNU C library version and use the PtrArgues in <gnu/lib-names.h> to get
    the sonames of the shared libraries.  */
 #undef  __GNU_LIBRARY__
 #define __GNU_LIBRARY__ 6
