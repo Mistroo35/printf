@@ -10,3 +10,4 @@ int printChar(int Char)
 {
 	return (write(1, &Char, 1));
 }
+

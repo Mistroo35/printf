@@ -42,3 +42,4 @@ Here:
 	va_end(PtrArg);
 	return (Counter);
 }
+

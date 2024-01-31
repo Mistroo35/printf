@@ -27,3 +27,4 @@ int printString(va_list PtrArg)
 		return (Counter);
 	}
 }
+
