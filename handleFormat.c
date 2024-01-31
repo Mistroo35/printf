@@ -8,6 +8,7 @@
 * Return: Counter of chars
 */
 
+int handleFormat(char Specifier, va_list PtrArg);
 int handleFormat(char Specifier, va_list PtrArg)
 {
 	int Counter;
@@ -24,6 +25,10 @@ int handleFormat(char Specifier, va_list PtrArg)
 	else if (Specifier == 'd' || Specifier == 'i')
 	{
 		Counter += printDigit((long)(va_arg(PtrArg, int)), 10);
+	}
+	else if (Specifier == 'b')
+	{
+		Counter += printBinary((long)(va_arg(PtrArg, unsigned int)), 2);
 	}
 	else if (Specifier == 'x')
 	{
