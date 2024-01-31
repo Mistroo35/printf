@@ -16,14 +16,14 @@ int printString(va_list PtrArg)
 		String = "(null)";
 		Counter = _strlen(String);
 		for (i = 0; i < Counter; i++)
-			_putchar(s[i]);
+			_putchar(String[i]);
 		return (Counter);
 	}
 	else
 	{
-		len = Counter(s);
+		Counter = _strlen(String);
 		for (i = 0; i < Counter; i++)
-			_putchar(s[i]);
+			_putchar(String[i]);
 		return (Counter);
 	}
 }

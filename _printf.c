@@ -7,7 +7,7 @@
 int _printf(const char * const Format, ...)
 {
 	HandleSpecifier Array[] = {
-		{"%s", printf_string}, {"%c", printChar}, {"%%", printf_37},
+		{"%s", printString}, {"%c", printChar}, {"%%", printf_37},
 		{"%i", printf_int}, {"%d", printf_dec}, {"%r", printf_srev},
 		{"%R", printf_rot13}, {"%b", printf_bin}, {"%u", printf_unsigned},
 		{"%o", printf_oct}, {"%x", printf_hex}, {"%X", printf_HEX},
