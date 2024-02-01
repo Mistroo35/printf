@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * printf_bin - prints a binary number.
- * @PtrArg: arguments.
+ * printf_bin - to prints a binary number.
+ * @PtrArg: the arguments.
  * Return: 1.
  */
 int printf_bin(va_list PtrArg)
