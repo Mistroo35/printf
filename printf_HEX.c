@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printf_HEX - prints a hexgecimal number.
+ * printf_HEX - A function that prints hex decimal number
  * @PtrArg: the arguments.
  * Return: counter.
  */
