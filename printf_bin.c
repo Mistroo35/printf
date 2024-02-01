@@ -7,6 +7,7 @@
  */
 int printf_bin(va_list PtrArg)
 {
+	//variabels declarations
 	int flag = 0;
 	int cont = 0;
 	int i, a = 1, b;
