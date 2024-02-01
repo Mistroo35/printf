@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * printf_HEX - prints an hexgecimal number.
- * @PtrArg: arguments.
+ * printf_HEX - prints a hexgecimal number.
+ * @PtrArg: the arguments.
  * Return: counter.
  */
 int printf_HEX(va_list PtrArg)

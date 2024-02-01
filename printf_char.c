@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * printf_char - prints a char.
- * @PtrArg: arguments.
+ * printf_char -a function that prints a char.
+ * @PtrArg: the arguments.
  * Return: 1.
  */
 int printf_char(va_list PtrArg)
