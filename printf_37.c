@@ -4,7 +4,6 @@
  * Return: 1.
  */
 
-//function declaration
 int printf_37(void)
 {
 	_putchar(37);
