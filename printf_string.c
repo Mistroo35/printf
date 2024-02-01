@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * printf_string - print a string.
+ * printf_string - function that  prints a string.
  * @PtrArg: argumen t.
  * Return: the length of the string.
  */
