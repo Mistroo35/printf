@@ -5,9 +5,7 @@
  * @PtrArg: the arguments.
  * Return: 1.
  *
- * /
-
- //function declartion
+ */
  
  int printf_char(va_list PtrArg)
 {
