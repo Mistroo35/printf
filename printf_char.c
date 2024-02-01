@@ -4,8 +4,12 @@
  * printf_char -a function that prints a char.
  * @PtrArg: the arguments.
  * Return: 1.
- */
-int printf_char(va_list PtrArg)
+ *
+ * /
+
+ //function declartion
+ 
+ int printf_char(va_list PtrArg)
 {
 	char s;
 
