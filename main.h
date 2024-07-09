@@ -2,47 +2,37 @@
 #define MAIN_H
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <stdarg.h>
-#include <limits.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <limits.h>
 
 
+#define BUFFSIZE 1024
 
-/**
- * struct format - match the conversion specifiers for printf
- * @id: type char pointer of the specifier i.e (l, h) for (d, i, u, o, x, X)
- * @f: type pointer to the function for the conversion specifier
- */
-
-typedef struct format
-{
-	char *id;
-	int (*f)();
-} Specifier;
-
-int printf_pointer(va_list PtrArg);
-int printf_hex_aux(unsigned long int num);
-int printf_HEX_aux(unsigned int num);
-int printf_exclusive_string(va_list PtrArg);
-int printf_HEX(va_list PtrArg);
-int printf_hex(va_list PtrArg);
-int printf_oct(va_list PtrArg);
-int printf_unsigned(va_list args);
-int printf_bin(va_list PtrArg);
-int printf_srev(va_list args);
-int printf_rot13(va_list args);
-int printf_int(va_list args);
-int printf_dec(va_list args);
-int _strlen(char *s);
-int *_strcpy(char *dest, char *src);
-int _strlenc(const char *s);
-int rev_string(char *s);
-int _strlenc(const char *s);
-int printf_37(void);
-int printf_char(va_list PtrArg);
-int printf_string(va_list PtrArg);
-int _putchar(char c);
+int getprintfun(va_list args, const char *cursor);
+int writestr(char *str, int len);
+int writechar(char c);
 int _printf(const char *format, ...);
+int _printchar(va_list args);
+int _printstr(va_list args);
+int _printperc(void);
+int _printint(va_list args);
+int intToStr(int x);
+int _printbin(va_list args);
+int _printui(va_list args);
+int unsignedToStr(unsigned int x);
+int _printoctal(va_list args);
+int _printhexa_s(va_list args);
+char character_replace_s(int hexaNum);
+int _printhexa_C(va_list args);
+char character_replace_C(int hexaNum);
+int _printS(va_list args);
+int intToHex(int x);
+int _printaddress(va_list args);
+int _printrot13(va_list args);
+char *tohex(char *hex, int ch);
+int _printreverse(va_list args);
+
 
 #endif
